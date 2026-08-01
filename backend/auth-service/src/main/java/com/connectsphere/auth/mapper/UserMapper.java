@@ -1,7 +1,7 @@
 package com.connectsphere.auth.mapper;
 
 import com.connectsphere.auth.dto.request.RegisterRequest;
-import com.connectsphere.auth.entity.User;
+import com.connectsphere.auth.domain.entity.User;
 
 public class UserMapper {
 

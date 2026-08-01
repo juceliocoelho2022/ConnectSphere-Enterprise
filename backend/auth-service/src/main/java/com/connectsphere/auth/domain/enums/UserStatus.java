@@ -1,4 +1,4 @@
-package com.connectsphere.auth.enums;
+package com.connectsphere.auth.domain.enums;
 
 public enum UserStatus {
 

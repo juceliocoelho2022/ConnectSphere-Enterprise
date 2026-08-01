@@ -1,13 +1,13 @@
 package com.connectsphere.auth.service;
 
+import com.connectsphere.auth.domain.entity.User;
+import com.connectsphere.auth.domain.repository.UserRepository;
 import com.connectsphere.auth.dto.request.LoginRequest;
 import com.connectsphere.auth.dto.request.RegisterRequest;
 import com.connectsphere.auth.dto.response.LoginResponse;
 import com.connectsphere.auth.dto.response.RegisterResponse;
-import com.connectsphere.auth.entity.User;
 import com.connectsphere.auth.exception.EmailAlreadyExistsException;
 import com.connectsphere.auth.mapper.UserMapper;
-import com.connectsphere.auth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -38,9 +38,8 @@ public class AuthService {
                 .email(user.getEmail())
                 .build();
     }
+
     public LoginResponse login(LoginRequest request) {
-
         throw new UnsupportedOperationException("Not implemented yet");
-
     }
 }
