@@ -1,6 +1,8 @@
 package com.connectsphere.auth.service;
 
+import com.connectsphere.auth.dto.request.LoginRequest;
 import com.connectsphere.auth.dto.request.RegisterRequest;
+import com.connectsphere.auth.dto.response.LoginResponse;
 import com.connectsphere.auth.dto.response.RegisterResponse;
 import com.connectsphere.auth.entity.User;
 import com.connectsphere.auth.exception.EmailAlreadyExistsException;
@@ -34,7 +36,11 @@ public class AuthService {
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .email(user.getEmail())
-                .message("User created successfully.")
                 .build();
+    }
+    public LoginResponse login(LoginRequest request) {
+
+        throw new UnsupportedOperationException("Not implemented yet");
+
     }
 }

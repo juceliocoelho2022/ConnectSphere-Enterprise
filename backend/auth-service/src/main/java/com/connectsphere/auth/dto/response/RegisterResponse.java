@@ -17,6 +17,4 @@ public class RegisterResponse {
 
     private String email;
 
-    private String message;
-
 }

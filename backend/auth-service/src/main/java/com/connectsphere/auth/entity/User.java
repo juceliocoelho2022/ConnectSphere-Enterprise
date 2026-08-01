@@ -1,5 +1,6 @@
 package com.connectsphere.auth.entity;
 
+import com.connectsphere.auth.domain.entity.BaseEntity;
 import com.connectsphere.auth.enums.UserStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,8 +15,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,13 +48,7 @@ public class User {
     @Column(name = "credentials_non_expired")
     private Boolean credentialsNonExpired;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-
-    @PrePersist
     public void prePersist() {
 
         uuid = UUID.randomUUID();
@@ -73,7 +67,7 @@ public class User {
 
     }
 
-    @PreUpdate
+
     public void preUpdate() {
 
         updatedAt = LocalDateTime.now();
