@@ -1,0 +1,9 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/connectsphere_auth_test
+    username: postgres
+    password: 89327934
+
+  flyway:
+    enabled: true

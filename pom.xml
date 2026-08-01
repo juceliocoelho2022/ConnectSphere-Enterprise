@@ -19,7 +19,7 @@
     <description>Enterprise Social Platform</description>
 
     <modules>
-
+        <module>backend/auth-service</module>
     </modules>
 
 </project>
