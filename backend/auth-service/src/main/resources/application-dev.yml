@@ -3,16 +3,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5434/connectsphere
-    username: postgres
-    password: 89327934
+    url: ${DB_URL:jdbc:postgresql://localhost:5434/connectsphere}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
       ddl-auto: validate
-
     open-in-view: false
-
     properties:
       hibernate:
         format_sql: true
@@ -24,8 +22,3 @@ spring:
 logging:
   level:
     org.hibernate.SQL: DEBUG
-
-jwt:
-  secret: 7D6B9D2F0E8C4A5B6F1D9A2C3E4F5A6B7C8D9E0F123456789ABCDEF012345678
-  access-token-expiration: 900000
-  refresh-token-expiration: 604800000
